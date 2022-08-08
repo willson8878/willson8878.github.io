@@ -34,8 +34,7 @@ jobs:
         uses: actions/configure-pages@v1
       - uses: actions/setup-node@v3
         with:
-          node-version: '17.2.0'
-      - run: echo ${{steps.deployment.outputs.page_url}}
+          node-version: '17.x'
       - name: Install Dependencies & Build
         run: |
           npm install
