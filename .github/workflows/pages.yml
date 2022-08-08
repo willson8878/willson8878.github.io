@@ -31,17 +31,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v1
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          node-version: '17.x'
+          # Upload entire repository
+          path: '.'
           
-      - name: Install Dependencies & Build
-        run: |
-          npm i
-          npm run build
-          
-      - name: Deploy
-        uses: actions/deploy-pages@v1
-        with:
-          path: dist/personalsite
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@main
