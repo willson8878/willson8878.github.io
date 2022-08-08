@@ -33,7 +33,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v1
       - name: ng build
-        run: npm run build
+        run: ng build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
