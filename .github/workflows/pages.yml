@@ -44,4 +44,4 @@ jobs:
       - name: Deploy
         uses: actions/deploy-pages@v1
         with:
-          path: ./dist/personalsite
+          path: dist/personalsite
