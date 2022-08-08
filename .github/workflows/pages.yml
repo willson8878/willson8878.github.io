@@ -42,7 +42,6 @@ jobs:
           npm run build
           
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: actions/deploy-pages@v1
         with:
-          token: ${{ secrets.PERSONAL_SITE }}
-          publish_dir: ./dist/personalsite
+          path: ./dist/personalsite
