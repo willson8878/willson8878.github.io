@@ -37,7 +37,7 @@ jobs:
           node-version: '17.x'
       - name: Install Dependencies & Build
         run: |
-          npm install
+          npm i
           npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
@@ -47,4 +47,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@main
+        with:
+          artifacts: "dist/personalsite/*"
 
