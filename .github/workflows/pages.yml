@@ -45,7 +45,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: './.next/static/chunks/pages/'
+          path: './out/'
           
       - name: Deploy to GitHub Pages
         id: deployment
