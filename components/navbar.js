@@ -38,7 +38,7 @@ const NavBar = props => {
       w="100%"
       bg={useColorModeValue('#ffffff40', '#202023')}
       style={{ backdropFilter: 'blur(10px)' }}
-      zIndex={1}
+      zIndex={2}
       {...props}
     >
       <Container display="flex" p={2} maxW="container.md" wrap="warp" align="center" justify="space-between">
@@ -57,15 +57,22 @@ const NavBar = props => {
         >
           <LinkItem href="/works" path={path}>Work</LinkItem>
           <LinkItem href="/posts" path={path}>Posts</LinkItem>
-          <IoLogoGithub />
-          <LinkItem href="https://github.com/willson8878/willson8878.github.io" path={path}>
-            
+          <Link
+            target="_blank"
+            href="https://github.com/willson8878/willson8878.github.io"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <IoLogoGithub />
             Source
-          </LinkItem>
+          </Link>
         </Stack>
         <Box flex={1} align="right">
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu>
+            <Menu isLazy id="navbar-menu">
               <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" arial-label="Options" />
               <MenuList>
                 <NextLink href="/">
